@@ -1,0 +1,33 @@
+<!doctype html> 
+
+<html class="no-js" lang=""> 
+
+<head> 
+
+<meta data-sly-use.tmpl="partials/head.html" data-sly-call="${tmpl.head}"/> 
+
+<link data-sly-use.tmpl="partials/headlibs.html" data-sly-call="${tmpl.headlibs}"/> 
+
+</head> 
+
+<body> 
+
+<div id="wrapper"> 
+
+<div data-sly-use.tmpl="partials/header.html" data-sly-call="${tmpl.header}"></div> 
+
+<sly data-sly-resource="${@resourceType='aem-bootcamp/components/structure/breadcrumb'}"></sly> 
+
+<div data-sly-use.tmpl="partials/main.html" data-sly-call="${tmpl.main}"></div> 
+
+<div data-sly-use.tmpl="partials/footer.html" data-sly-call="${tmpl.footer}"></div> 
+
+<div data-sly-use.tmpl="partials/footlibs.html" data-sly-call="${tmpl.footlibs}"></div> 
+
+</div> 
+
+<a href="#" class="scrollup"><i class="fa fa-angle-upactive"></i></a> 
+
+</body> 
+
+</html> 

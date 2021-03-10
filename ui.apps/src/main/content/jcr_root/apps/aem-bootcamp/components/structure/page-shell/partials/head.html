@@ -1,0 +1,88 @@
+<template data-sly-template.head="">
+
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8"
+		data-sly-use.head="head.js"
+		data-sly-use.headlibRenderer="headlibs.html"
+		data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" />
+
+	<metadata-sly-test.keywords ="${head.keywords}" name="keywords"
+		content="${keywords}" />
+
+	<metadata-sly-test.description
+		="${head.description}" name="description" content="${description}" />
+
+	<sly data-sly-include="author.html" />
+
+	<sly
+		data-sly-include="/libs/cq/cloudserviceconfigs/components/servicelibs/servicelibs.jsp" />
+
+	<sly data-sly-test.faviconpath="${head.faviconPath}">
+
+	<link rel="icon " type="image/vnd.microsoft.icon" href="${faviconpath}">
+
+	<link rel="shortcuticon" type="image/vnd.microsoft.icon"
+		href="${faviconpath}">
+
+	</sly>
+
+	<title>${properties.jcr:title}</title>
+
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+
+
+	<link rel="shortcuticon"
+		href="/apps/aem-bootcamp/clientlib-site/img/favicon/favicon.ico"
+		type="image/x-icon">
+
+	<link rel="icon"
+		href="/apps/aem-bootcamp/clientlib-site/img/favicon/favicon.ico"
+		type="image/x-icon">
+
+	<link rel="apple-touch-icon" sizes="57x57"
+		href="/apps/aem-bootcamp/clientlib-site/img/favicon/apple-icon-57x57.png">
+
+	<link rel="apple-touch-icon" sizes="60x60"
+		href="/apps/aem-bootcamp/clientlib-site/img/favicon/apple-icon-60x60.png">
+
+	<link rel="apple-touch-icon" sizes="72x72"
+		href="/apps/aem-bootcamp/clientlib-site/img/favicon/apple-icon-72x72.png">
+
+	<link rel="apple-touch-icon" sizes="76x76"
+		href="/apps/aem-bootcamp/clientlib-site/img/favicon/apple-icon-76x76.png">
+
+	<link rel="apple-touch-icon" sizes="114x114"
+		href="/apps/aem-bootcamp/clientlib-site/img/favicon/apple-icon-114x114.png">
+
+	<link rel="apple-touch-icon" sizes="120x120"
+		href="/apps/aem-bootcamp/clientlib-site/img/favicon/apple-icon-120x120.png">
+
+	<link rel="apple-touch-icon" sizes="144x144"
+		href="/apps/aem-bootcamp/clientlib-site/img/favicon/apple-icon-144x144.png">
+
+	<link rel="apple-touch-icon" sizes="152x152"
+		href="/apps/aem-bootcamp/clientlib-site/img/favicon/apple-icon-152x152.png">
+
+	<link rel="apple-touch-icon" sizes="180x180"
+		href="/apps/aem-bootcamp/clientlib-site/img/favicon/apple-icon-180x180.png">
+
+	<link rel="icon" type="image/png" sizes="192x192"
+		href="/apps/aem-bootcamp/clientlib-site/img/favicon/android-icon-192x192.png">
+
+	<link rel="icon" type="image/png" sizes="32x32"
+		href="/apps/aem-bootcamp/clientlib-site/img/favicon/favicon-32x32.png">
+
+	<link rel="icon" type="image/png" sizes="96x96"
+		href="/apps/aem-bootcamp/clientlib-site/img/favicon/favicon-96x96.png">
+
+	<link rel="icon" type="image/png" sizes="16x16"
+		href="/apps/aem-bootcamp/clientlib-site/img/favicon/favicon-16x16.png">
+
+	<meta name="msapplication-TileColor" content="#ffffff">
+
+	<meta name="msapplication-TileImage"
+		content="/apps/aem-bootcamp/clientlib-site/img/favicon/ms-icon-144x144.png">
+
+	<meta name="theme-color" content="#ffffff">
+
+</template>
