@@ -5,9 +5,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import javax.annotation.PostConstruct;
-
 import org.apache.sling.api.resource.Resource;
-
 import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.resource.ValueMap;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
@@ -34,48 +32,37 @@ public class HeaderModel {
 
 	@SlingObject
 	private ResourceResolver resourceResolver;
-
 	List<Page> headerNavigationItemList;
 
 	@PostConstruct
-	public void init() throws Exception{
+	public void init() {
 		headerNavigationItemList = new ArrayList<>();
-
 		Iterator<Resource> children = navigations.listChildren();
-
 		while (children.hasNext()) {
-
 			Resource childResource = children.next();
-
+			try {
 			ValueMap properties = childResource.adaptTo(ValueMap.class);
-
 			String rootPath = properties.get("rootPath", String.class);
-
 			Page navPage = resourceResolver.getResource(rootPath).adaptTo(Page.class);
-
 			headerNavigationItemList.add(navPage);
+			}catch(NullPointerException e) {
+				e.printStackTrace();
+			}
 		}
 	}
-
 	public String getFileReference() {
-
 		return fileReference;
 	}
 
 	public String getAltText() {
-
 		return altText;
 	}
 
 	public String getLogoLink() {
-
 		return logoLink;
 	}
 
 	public List<Page> getHeaderNavigationItemsList() {
-
 		return headerNavigationItemList;
-
 	}
-
 }

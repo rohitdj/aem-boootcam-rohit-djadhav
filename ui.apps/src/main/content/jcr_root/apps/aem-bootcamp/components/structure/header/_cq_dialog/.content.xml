@@ -30,6 +30,7 @@
                                             <file
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                                allowUpload="{Boolean}false"
                                                 autoStart="{Boolean}true"
                                                 cq-msm-lockable="/file"
                                                 fieldLabel="Upload File"
