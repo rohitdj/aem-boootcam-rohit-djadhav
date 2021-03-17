@@ -20,7 +20,7 @@ public class HeaderModel {
 	protected static final String RESOURCE_TYPE = "aem/bootcamp/structure/header";
 	@ValueMapValue(name = "fileReference")
 	private String fileReference;
-
+	
 	@ValueMapValue(name = "altText")
 	private String altText;
 
@@ -35,21 +35,32 @@ public class HeaderModel {
 	List<Page> headerNavigationItemList;
 
 	@PostConstruct
-	public void init() {
+	public void init()  {
 		headerNavigationItemList = new ArrayList<>();
-		Iterator<Resource> children = navigations.listChildren();
-		while (children.hasNext()) {
-			Resource childResource = children.next();
-			try {
-			ValueMap properties = childResource.adaptTo(ValueMap.class);
-			String rootPath = properties.get("rootPath", String.class);
-			Page navPage = resourceResolver.getResource(rootPath).adaptTo(Page.class);
-			headerNavigationItemList.add(navPage);
-			}catch(NullPointerException e) {
-				e.printStackTrace();
-			}
+		 Iterator<Resource> children = null;
+		 if (navigations != null) {
+			 children = navigations.listChildren();
+			 while (children.hasNext()) {
+					Resource childResource = children.next();
+					
+					ValueMap properties = childResource.adaptTo(ValueMap.class);
+					if( properties != null) {
+						String rootPath = properties.get("rootPath", String.class);
+						
+						Page navPage = resourceResolver.getResource(rootPath).adaptTo(Page.class);
+						if(navPage != null) {
+						headerNavigationItemList.add(navPage);
+						}
+					}
+					
+					}
+			  }
+		
+		
+		
+			
 		}
-	}
+	
 	public String getFileReference() {
 		return fileReference;
 	}
