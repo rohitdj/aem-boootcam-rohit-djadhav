@@ -27,33 +27,13 @@
                                 <items jcr:primaryType="nt:unstructured">
                                     <text
                                         jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                        sling:resourceType="cc"
                                         name="./text"
                                         useFixedInlineToolbar="{Boolean}true">
                                         <rtePlugins jcr:primaryType="nt:unstructured">
-                                            <format
-                                                jcr:primaryType="nt:unstructured"
-                                                features="*"/>
-                                            <justify
-                                                jcr:primaryType="nt:unstructured"
-                                                features="*"/>
-                                            <lists
-                                                jcr:primaryType="nt:unstructured"
-                                                features="*"/>
-                                            <paraformat
-                                                jcr:primaryType="nt:unstructured"
-                                                features="*"/>
                                             <links
                                                 jcr:primaryType="nt:unstructured"
                                                 features="*"/>
-                                            <table
-                                                jcr:primaryType="nt:unstructured"
-                                                features="-">
-                                                <hiddenHeaderConfig
-                                                    jcr:primaryType="nt:unstructured"
-                                                    hiddenHeaderClassName="cq-wcm-foundation-aria-visuallyhidden"
-                                                    hiddenHeaderEditingCSS="coral-RichText-hiddenHeader--editing"/>
-                                            </table>
                                             <findreplace
                                                 jcr:primaryType="nt:unstructured"
                                                 features="*"/>
@@ -66,15 +46,12 @@
                                             <undo
                                                 jcr:primaryType="nt:unstructured"
                                                 features="*"/>
-                                            <misctools
-                                                jcr:primaryType="nt:unstructured"
-                                                features="*"/>
                                         </rtePlugins>
                                         <uiSettings jcr:primaryType="nt:unstructured">
                                             <cui jcr:primaryType="nt:unstructured">
                                                 <inline
                                                     jcr:primaryType="nt:unstructured"
-                                                    toolbar="[format#bold,format#italic,format#underline,#justify,#lists,links#modifylink,links#unlink,#paraformat,findreplace#find,findreplace#replace,edit#cut,edit#copy,edit#paste]">
+                                                    toolbar="[format#bold,format#italic,format#underline,#justify,#lists,links#modifylink,links#unlink,#paraformat,findreplace#find,findreplace#replace,edit#cut,edit#copy,edit#paste,edit#paste-default,edit#paste-plaintext,subsuperscript#subscript,subsuperscript#subscript,links#anchor,links#modiftlink,lists#indent,lists#outdent,misctools#specialchars,misctools#sourceedit,undo#undo,undo#redo]">
                                                     <popovers jcr:primaryType="nt:unstructured">
                                                         <justify
                                                             jcr:primaryType="nt:unstructured"
