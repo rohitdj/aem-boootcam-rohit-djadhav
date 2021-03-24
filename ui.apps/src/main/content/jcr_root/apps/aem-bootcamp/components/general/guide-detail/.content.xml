@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:description="This is Guide_detail Component for AEM-3."
+    jcr:primaryType="cq:Component"
+    jcr:title="Guide Detail Component."
+    sling:resourceSuperType="/apps/aem-bootcamp/components/structure/home-page"/>
